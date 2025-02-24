@@ -3,6 +3,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import CakeList from './components/CakeList';
 import CakeForm from './components/CakeForm';
 import FavouriteCakeList from './components/FavouriteCakeList';
+import FavouriteCakeDetail from './components/FavouriteCakeDetail';
 
 const App: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const App: React.FC = () => {
           <Route path="/" element={<CakeList />} />
           <Route path="/add/:id" element={<CakeForm />} />
           <Route path="/favourites" element={<FavouriteCakeList />} />
+          <Route path="/favourite/:id" element={<FavouriteCakeDetail />} />
         </Routes>
       </main>
     </div>

@@ -23,3 +23,8 @@ export const getFavouriteCakes = async (): Promise<Cake[]> => {
   const response = await axios.get(`${API_URL}/${FAVOURITES}`);
   return response.data;
 };
+
+export const getFavouriteCakeById = async (id: number): Promise<Cake> => {
+  const response = await axios.get(`${API_URL}/${FAVOURITES}/${id}`);
+  return response.data;
+};
