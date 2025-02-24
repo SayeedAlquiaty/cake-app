@@ -34,8 +34,8 @@ const FavouriteCakeList: React.FC = () => {
             <li key={cake.id}>
               <img src={cake.imageUrl} alt={cake.name} width="100" />
               <p>{cake.name}</p>
-              <Link to={`/cakes/${cake.id}`} className="cake-card" key={cake.id}>
-                {'Cake details'}
+              <Link to={`/favourite/${cake.id}`} className="cake-card" key={cake.id}>
+                {'Favourite Cake details'}
               </Link>
             </li>
           ))}
