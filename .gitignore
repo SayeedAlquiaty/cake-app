@@ -29,3 +29,4 @@ yarn-error.log*
 /.vs/cake-app/FileContentIndex/140dffd0-e584-4831-8608-c543d5c1e146.vsidx
 /.vs/slnx.sqlite
 /.vs/cake-app/FileContentIndex/5467773f-e5b9-48d6-a263-fb4e4b3904c2.vsidx
+*.vsidx
