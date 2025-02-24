@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { getCakes } from '../api/cakeApi';
+import { getFavouriteCakes } from '../api/cakeApi';
 import { Cake } from '../types/Cake';
 import { Link } from 'react-router-dom';
 
-const CakeList: React.FC = () => {
+const FavouriteCakeList: React.FC = () => {
   const [cakes, setCakes] = useState<Cake[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchCakes = async () => {
       try {
-        const data = await getCakes();
+        const data = await getFavouriteCakes();
         setCakes(data);
       } catch (error) {
         console.error('Error fetching cakes', error);
@@ -25,23 +25,24 @@ const CakeList: React.FC = () => {
 
   return (
     <div className="navbar">
-      <h2>🍰 Cakes Gallery</h2>
+      <h2>🍰 Favourite Cakes</h2>
       {cakes.length === 0 ? (
         <p>No cakes added yet.</p>
       ) : (
-        <div className="cake-grid">
-            {cakes.map((cake) => (
-              <div className="cake-card">
-                <label >{'Name: '}{cake.name}</label>
-                <Link to={`/add/${cake.id}`} className="cake-card" key={cake.id}>
-                {'Add to Favourite'}
-                </Link>
-              </div>
-            ))}
-        </div>
+        <ul>
+          {cakes.map((cake) => (
+            <li key={cake.id}>
+              <img src={cake.imageUrl} alt={cake.name} width="100" />
+              <p>{cake.name}</p>
+              <Link to={`/cakes/${cake.id}`} className="cake-card" key={cake.id}>
+                {'Cake details'}
+              </Link>
+            </li>
+          ))}
+        </ul>
       )}
     </div>
   );
 };
 
-export default CakeList;
+export default FavouriteCakeList;
