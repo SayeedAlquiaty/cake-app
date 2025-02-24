@@ -1,0 +1,31 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/.vs/cake-app/FileContentIndex/0ffd303b-dbf4-4351-bed8-1a07d83709dc.vsidx
+/.vs/cake-app/FileContentIndex/c1136f0e-b336-47b5-9c2b-da7f4b7291d0.vsidx
+/.vs/cake-app/FileContentIndex/e12293ea-3b1c-45ac-8ee3-25cca3c760d5.vsidx
+/.vs/cake-app/FileContentIndex/e901f7f8-bb5f-4b3d-b705-5c83a6c2b091.vsidx
+/.vs/cake-app/FileContentIndex/ea720565-692b-43fe-aaa4-c9dcc6b2cd66.vsidx
+/.vs/cake-app/FileContentIndex/140dffd0-e584-4831-8608-c543d5c1e146.vsidx
+/.vs/slnx.sqlite
+/.vs/cake-app/FileContentIndex/5467773f-e5b9-48d6-a263-fb4e4b3904c2.vsidx
